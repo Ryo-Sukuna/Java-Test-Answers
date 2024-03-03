@@ -1,1 +1,2 @@
 # Java-Test-Answers
+If you possess answers that are currently absent in this repository, kindly create a new branch and submit a merge request to incorporate your contributions. Your cooperation is greatly appreciated.
