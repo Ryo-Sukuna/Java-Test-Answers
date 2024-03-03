@@ -1,0 +1,42 @@
+//File Name: q24931/TextProcessing.java
+//==================================
+package q24931;
+import java.util.Scanner;
+
+interface GetCharacter{	
+	void displayChar(String inputString, int position);
+	
+}class FirstCharacter implements GetCharacter{
+	@Override
+	public void displayChar(String inputString, int position){	
+		System.out.println("First Character: "+ inputString.charAt(0));
+		}}
+		class LastCharacter implements GetCharacter{
+			@Override
+			public void displayChar(String inputString, int position){	
+				System.out.println("Last Character: "+ inputString.charAt(inputString.length()-1));	
+				
+			}
+			
+		}
+
+public class TextProcessing{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user to input a string
+        System.out.print("Enter a string: ");
+        String userString = scanner.nextLine();
+
+        // Example usage of FirstCharacter class
+        GetCharacter firstCharProcessor = new FirstCharacter();
+        firstCharProcessor.displayChar(userString, 0);
+
+        // Example usage of LastCharacter class
+        GetCharacter lastCharProcessor = new LastCharacter();
+        lastCharProcessor.displayChar(userString, 0);
+
+        scanner.close();
+    }
+}
+

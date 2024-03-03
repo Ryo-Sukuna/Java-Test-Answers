@@ -1,0 +1,28 @@
+//File Name: q24926/Main.java
+//==================================
+package q24926;
+import java.util.Scanner;
+
+	// write your code here..
+/*
+public class Main {
+    public static void main(String[] args) {
+        CircumferenceAndAreaOut circleData = new CircumferenceAndAreaOut();
+        circleData.inputRadius();
+        circleData.calculateCircumference();
+        circleData.calculateArea();
+    }
+}
+*/
+public class Main{
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		System.out.print("radius: ");
+		double radius = sc.nextDouble();
+		double c = 2 * Math.PI * radius;
+		System.out.println("Circumference: "+ c);
+		double r = Math.PI * radius * radius;
+		System.out.println("Area: "+r);
+	}
+}
+

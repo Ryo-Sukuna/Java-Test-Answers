@@ -1,0 +1,41 @@
+//File Name: q24780/EmployeeIntro.java
+//==================================
+package q24780;
+import java.util.Scanner;
+
+	// write your code here..
+class Employee{	
+	public void introduce(){
+		System.out.println("Introducing an employee");	
+		}	}	
+		class Manager extends Employee{	
+			private String department;	
+			@Override	
+			public void introduce(){
+				Scanner scanner = new Scanner(System.in);
+					// System.out.print("\n");		
+					System.out.print("Department of manager: ");
+				department = scanner.nextLine();	
+				System.out.println("I am a manager in the "+ department + " department");	
+				}	}		class Intern extends Employee{
+					private String project;	
+					@Override	
+					public void introduce(){
+						Scanner scanner = new Scanner(System.in);
+						System.out.print("Project of intern: ");
+						project = scanner.nextLine();		
+						System.out.println("I am an intern working on the "+ project + " project");
+						}	}
+public class EmployeeIntro {
+    public static void main(String[] args) {
+        Employee employee = new Employee();
+        employee.introduce();
+
+        Manager manager = new Manager();
+        manager.introduce();
+
+        Intern intern = new Intern();
+        intern.introduce();
+    }
+}
+

@@ -1,0 +1,27 @@
+//File Name: q22058/Main.java
+//==================================
+package q22058;
+// write your code here 
+import java.util.Scanner;
+class CustomObject{
+	String input1;
+	int input2;
+	CustomObject(String str,int atr){
+		input1=str;
+		input2=atr;
+	}
+	public String toString(){
+		return "CustomObject{attribute1=\'"+input1+"\', attribute2="+input2+"}";
+	}
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String userInput1 = scanner.nextLine();
+        int userInput2 = scanner.nextInt();
+        CustomObject customObject = new CustomObject(userInput1, userInput2);
+        System.out.println(customObject);
+    }
+}
+

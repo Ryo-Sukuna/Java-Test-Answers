@@ -1,0 +1,49 @@
+//File Name: q23761/BeverageOrder.java
+//==================================
+package q23761;
+import java.util.Scanner;
+
+// write your code here..
+class Beverage{
+	void orderBeverage(){
+		System.out.println("Ordering a beverage");
+	}
+}
+class Coffee extends Beverage{
+	void orderBeverage(){
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Coffee type: ");
+		String str=sc.next();
+		System.out.print("size of the coffee: ");
+		String str1=sc.next();
+		System.out.println("Ordered Coffee Details:");
+		System.out.println("Coffee Type: "+str);
+		System.out.println("Size: "+str1);
+	}
+}
+class Tea extends Beverage{
+	void orderBeverage(){
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Tea type: ");
+		String str=sc.nextLine();
+		System.out.print("Sweetness level: ");
+		String str1=sc.nextLine();
+		System.out.println("Ordered Tea Details:");
+		System.out.println("Tea Type: "+str);
+		System.out.println("Sweetness Level: "+str1);
+	}
+}
+
+public class BeverageOrder {
+    public static void main(String[] args) {
+        Beverage beverage = new Beverage();
+        beverage.orderBeverage();
+
+        Coffee coffee = new Coffee();
+        coffee.orderBeverage();
+
+        Tea tea = new Tea();
+        tea.orderBeverage();
+    }
+}
+

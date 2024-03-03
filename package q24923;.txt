@@ -1,0 +1,29 @@
+//File Name: q24923/MainCalculation.java
+//==================================
+package q24923;
+
+import java.util.Scanner;
+
+
+	// write your code here..
+class My_Calculation {    private int num1;    private int num2;    My_Calculation(int num1, int num2) {        this.num1 = num1;        this.num2 = num2;    }    int subtraction() {        return num1 - num2;    }    int multiplication() {        return num1 * num2;    }}
+public class MainCalculation {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int num1 = scanner.nextInt();
+        int num2 = scanner.nextInt();
+
+        My_Calculation myCalculation = new My_Calculation(num1, num2);
+
+        int diff = myCalculation.subtraction();
+        int product = myCalculation.multiplication();
+
+        System.out.println(diff);
+        System.out.println(product);
+
+        scanner.close();
+    }
+}
+
+package q23761;

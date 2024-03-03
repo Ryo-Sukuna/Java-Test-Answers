@@ -1,0 +1,49 @@
+//File Name: q24936/ShapeCalculator.java
+//==================================
+package q24936;
+
+import java.util.Scanner;
+
+
+	// write your code here..
+	class Shape{
+		void calculateVolume(){
+			System.out.println("Calculating volume of Shape.");
+		}
+	}
+	class Cube extends Shape{
+		void calculateVolume(){
+			Scanner sc = new Scanner(System.in);
+			System.out.print("Side of the cube: ");
+			double side=sc.nextDouble();
+			double volume=side*side*side;
+			System.out.printf("Volume of Cube: %.2f\n",volume);
+		}
+	}
+	class Cuboid extends Shape{
+		void calculateVolume(){
+			Scanner sc = new Scanner(System.in);
+			System.out.print("Length of the cuboid: ");
+			double len=sc.nextDouble();
+			System.out.print("Width of the cuboid: ");
+			double wid=sc.nextDouble();
+			System.out.print("Height of the cuboid: ");
+			double height=sc.nextDouble();
+			double volume=len*wid*height;
+			System.out.printf("Volume of Cuboid: %.2f\n",volume);
+		}
+	}
+
+
+public class ShapeCalculator {
+    public static void main(String[] args) {
+        // Creating instances of the subclasses
+        Cube cubeInstance = new Cube();
+        Cuboid cuboidInstance = new Cuboid();
+
+        // Calling calculateVolume() for each instance
+        cubeInstance.calculateVolume();
+        cuboidInstance.calculateVolume();
+    }
+}
+

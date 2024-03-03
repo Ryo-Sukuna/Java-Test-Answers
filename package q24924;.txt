@@ -1,0 +1,28 @@
+//File Name: q24924/MainFunction.java
+//==================================
+package q24924;
+import java.util.Scanner;
+
+	// write your code here..
+	class Numberln{
+		int num;
+		void inputNum(){
+			Scanner scanner = new Scanner(System.in);
+			System.out.print("Enter number: ");
+			num=scanner.nextInt();
+		}
+	}
+	class CubeOut extends Numberln{
+		void displayCube(){
+			System.out.println(super.num*super.num*super.num);
+		}
+	}
+
+public class MainFunction {
+    public static void main(String[] args) {
+    	CubeOut cubeeout = new CubeOut();
+        cubeeout.inputNum();
+        cubeeout.displayCube();
+    }
+}
+

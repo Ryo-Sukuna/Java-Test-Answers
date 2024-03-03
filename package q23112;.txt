@@ -1,0 +1,24 @@
+//File Name: q23112/MainFunction.java
+//==================================
+package q23112;
+import java.util.Scanner;
+
+/*	// write your code here..
+
+public class MainFunction {
+    public static void main(String[] args) {
+    	SquareOut squareout = new SquareOut();
+        squareout.inputNum();
+        squareout.displaySquare();
+    }
+}
+*/
+public class MainFunction{
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter number: ");
+		int a = sc.nextInt();
+		System.out.println(a*a);
+	}
+}
+

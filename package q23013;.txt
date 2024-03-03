@@ -1,0 +1,46 @@
+//File Name: q23013/MainCalculation.java
+//==================================
+package q23013;
+
+import java.util.Scanner;
+class Calculation{
+	int num1;
+	int num2;
+	Calculation(int num1,int num2){
+		this.num1=num1;
+		this.num2=num2;
+	}
+	int addition(){
+		return num1+num2;
+	}
+}
+class My_Calculation extends Calculation{
+	My_Calculation(int val1,int val2){
+		super(val1,val2);
+	}
+	int multiplication(){
+		return num1*num2;
+	}
+}
+
+	// write your code here..
+
+public class MainCalculation {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int num1 = scanner.nextInt();
+        int num2 = scanner.nextInt();
+
+        My_Calculation myCalculation = new My_Calculation(num1, num2);
+
+        int sum = myCalculation.addition();
+        int product = myCalculation.multiplication();
+
+        System.out.println(sum);
+        System.out.println(product);
+
+        scanner.close();
+    }
+}
+

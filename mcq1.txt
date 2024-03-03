@@ -1,0 +1,640 @@
+Ques - Multiple Choice - Ques - Multiple Answers
+Which of these is used to access member of class before object of that class is created?
+ public
+ private
+#  static
+ protected
+Ques - Multiple Choice - Single Answer
+Assuming that all the necessary imports are done, what will be the output of the following Java code?
+
+
+
+ class ct {
+     public int x;
+     private int y;
+ }    
+ class uv extends ct {
+     void display() {
+         super.y = super.x + 1;
+         Systemout.println(super.x + " " + super.y); 
+     }
+ } 
+ class inheritance {
+     public static void main(String args[]) {
+         uv obj = new uv();
+         obj.x = 1;
+         obj.y = 2;   
+         obj.display();     
+     }
+ }
+ 
+2 2
+3 3
+Runtime Error
+# Compilation Error
+
+Ques - Multiple Choice - Single Answer
+Assuming that all the necessary imports are done, what will be the output of the following Java program?
+
+
+
+ class parent {
+     int a;
+ }    
+ class child extends parent {
+     int b;
+     void display() {
+         super.a = b + 1;
+         System.out.println(b + " " + i);
+     }
+ }    
+ class inheritance {
+     public static void main(String args[]) { 
+         child obj = new child();
+         obj.a=1;
+         obj.b=2;   
+         obj.display();     
+     }
+}
+ 
+2 2
+3 3
+2 3
+# Compilation Error
+
+Ques - Multiple Choice - Single Answer
+In Java, the equals() method is used for:
+
+
+
+A. Comparing the memory addresses of two objects.
+B. Checking if two objects have the same content or state.
+C. Determining if two objects are of the same class.
+D. Overriding the default behavior of object comparison.
+
+ 
+Only A
+# B and D
+C and D
+Only D
+
+Ques - Multiple Choice - Single Answer
+Assuming all the necessary imports are done, predict the output of the following program.
+
+
+
+ abstract class demo {
+     public int marks;
+     demo() {
+         marks = 20;
+     }
+     abstract public void set();
+     abstract final public void get();
+ }
+ 
+ class Test extends demo {
+     public void set(int marks) {
+         this.marks = marks;
+     }
+     final public void get() {
+         System.out.println("marks = " + marks); 
+     }
+     public static void main(String[] args) {
+         Test obj = new Test();
+         obj.set(10);
+         obj.get();
+     }
+ }
+
+marks = 10
+marks = 20
+# Compilation error - Multiple Choice - Single Answer
+
+Which principle allows different classes to be treated as instances of the same class through inheritance?
+
+Encapsulation
+Abstraction
+Inheritance
+# Polymorphism
+
+Ques - Multiple Choice - Single Answer
+In Java, the toString() method is a part of the Object class. Which of the following statements about the toString() method is correct?
+
+
+
+A. The default implementation in the Object class returns the memory address of the object.
+
+B. The toString() method is automatically invoked when an object is created.
+
+C. Overriding the toString() method is mandatory for every Java class.
+
+D. The toString() method cannot be overridden by user-defined classes.
+
+ 
+# Only A
+
+ 
+A and B
+
+ 
+C and D
+
+ 
+Only D
+
+Ques - Multiple Choice - Single Answer
+What is inheritance in Java?
+
+The ability to create Ques - multiple instances of a class
+
+ 
+The ability to create new classes from existing classes
+
+ 
+The ability of a class to inherit fields and methods from its subclass
+
+ 
+# The ability of a subclass to inherit the fields and methods of its superclass - Multiple Choice - Single Answer
+
+Which keyword is used to implement inheritance in Java?
+
+ 
+inherit
+
+ 
+# extends
+
+ 
+implements
+
+ 
+inheritance
+
+Ques - Multiple Choice - Single Answer
+What is the purpose of the final keyword in Java?
+
+ 
+To prevent a class from being inherited
+
+ 
+To prevent a method from being overridden
+
+ 
+To prevent a variable from being reassigned
+
+ 
+# All of the above
+
+
+
+// ------------------------------------------------------------------------------------------------------------------
+
+Multiple Choice - Single Answer
+
+In Java, the toString() method is a part of the Object class. Which of the following statements about the toString() method is correct?
+
+
+
+A. The default implementation in the Object class returns the memory address of the object.
+
+B. The toString() method is automatically invoked when an object is created.
+
+C. Overriding the toString() method is mandatory for every Java class.
+
+D. The toString() method cannot be overridden by user-defined classes.
+
+ 
+# Only A
+A and B
+C and D
+Only D
+
+Multiple Choice - Single Answer
+
+In Java, what concept allows us to implement runtime polymorphism?
+
+ 
+Method overloading
+# Method overriding
+Constructors
+Static methods
+
+Multiple Choice - Single Answer
+
+What is the output of the following code? Assume that all the required imports are done.
+
+
+
+interface calculate {
+  void cal(int item);
+}
+class Show implements calculate {
+  int x;
+  public void cal(int item) {
+    x = item * item;
+  }
+}
+class Interfaces {
+  public static void main(String args[]) {
+    Show arr = new Show();
+    arr.x = 8;
+    arr.cal(14);
+    System.out.print(arr.x);
+   }
+}
+
+ 
+113
+# 196
+8
+Error
+
+Multiple Choice - Single Answer
+
+Assuming that all the necessary imports are done, what will be the correct output of the given code?
+
+class MainSubClass {
+    void f(int i) {
+        System.out.print(i);
+    }
+}
+
+public class Main extends MainSubClass {
+     void f(int i) {
+        System.out.print(2*i);
+    }
+	public static void main(String[] args) {
+	    MainSubClass x = new Main();
+        Main y = new Main();
+        Main z = new Main();
+        x.f(27); 
+        ((MainSubClass)y).f(57); 
+        z.f(194); 
+    }
+}
+
+
+ 
+5457194 
+2757194
+# 54114388
+27114194
+
+Multiple Choice - Multiple Answers
+
+Which of these is used to access member of class before object of that class is created?
+ public
+ private
+#  static
+ protected
+Multiple Choice - Single Answer
+
+Which of the following statements about abstract methods in Java is correct?
+
+
+
+A. Abstract methods have a default implementation in the abstract class.
+
+B. Abstract methods must be marked with the static keyword.
+
+C. Abstract methods are declared using the abstract keyword and must be implemented by concrete subclasses.
+
+D. Abstract methods can only be declared in interfaces, not in abstract classes.
+
+ 
+Only A
+ 
+C and D
+ 
+# C
+
+A and B
+
+Multiple Choice - Single Answer
+
+What is inheritance in Java?
+ 
+The ability to create multiple instances of a class
+ 
+The ability to create new classes from existing classes
+ 
+The ability of a class to inherit fields and methods from its subclass
+
+# The ability of a subclass to inherit the fields and methods of its superclass
+
+Multiple Choice - Single Answer
+
+Assume that the code executes fine. Predict the output and choose the suitable option.
+
+
+
+class Code {
+    public void showTime() {
+       System.out.println("1168");
+    }
+}
+  
+class Tantra extends Code {
+    public void showTime() {
+       System.out.println("50");
+    }
+}
+  
+public class Main {
+    public static void main(String[] args) {
+        Code b = new Tantra();
+        b.showTime();
+    }
+}
+ 
+1168
+
+ 
+# 50
+
+ 
+1168
+50
+
+ 
+50
+1168
+
+Multiple Choice - Multiple Answers
+
+The use of final keyword with method definition
+ Supports method overriding
+ implements dynamic method dispatch
+#  Prevents method overriding
+ None of the mentioned
+
+
+Multiple Choice - Single Answer
+
+Predict the correct results of below given code snippet:
+
+import java.io.*;
+interface a {
+	final int x = 46;
+	default void showTime2() {
+	System.out.println("60");
+	}
+}
+class Main implements a {
+	public void showTime1() {
+	System.out.println("8");
+	}
+	public static void main(String[] args) {
+		Main test = new Main();
+		test.showTime1();
+		System.out.println(x);
+		test.showTime2();
+		System.out.println(x);
+	}
+}
+ 
+# 8
+# 46
+# 60
+# 46
+
+ 
+8
+47
+60
+48
+
+ 
+8
+46
+60
+48
+
+ 
+error: cannot assign a value to final variable x
+error: interface abstract methods cannot have body
+
+// ------------------------------------------------------------------------------------------------------------------
+
+
+
+1
+Multiple Choice - Single Answer
+1.0
+In Java, the toString() method is a part of the Object class. Which of the following statements about the toString() method is correct?
+A. The default implementation in the Object class returns the memory address of the object.
+B. The toString() method is automatically invoked when an object is created.
+C. Overriding the toString() method is mandatory for every Java class.
+D. The toString() method cannot be overridden by user-defined classes.
+
+ 
+# Only A 
+A and B
+C and D
+Only D
+
+2
+Multiple Choice - Single Answer
+1.0
+What is inheritance in Java?
+
+The ability to create multiple instances of a class
+The ability to create new classes from existing classes
+The ability of a class to inherit fields and methods from its subclass
+# The ability of a subclass to inherit the fields and methods of its superclass
+
+3
+Multiple Choice - Single Answer
+1.0
+In Java, the equals() method is used for:
+
+A. Comparing the memory addresses of two objects.
+B. Checking if two objects have the same content or state.
+C. Determining if two objects are of the same class.
+D. Overriding the default behavior of object comparison.
+
+ 
+Only A
+# B and D
+C and D
+Only D
+
+4
+Multiple Choice - Single Answer
+1.0
+What is the output of the following code? Assume that all the required imports are done.
+
+
+
+interface calculate {
+  void cal(int item);
+}
+class Show implements calculate {
+  int x;
+  public void cal(int item) {
+    x = item * item;
+  }
+}
+class Interfaces {
+  public static void main(String args[]) {
+    Show arr = new Show();
+    arr.x = 8;
+    arr.cal(14);
+    System.out.print(arr.x);
+   }
+}
+
+ 
+113
+# 196
+8
+Error
+
+5
+Multiple Choice - Single Answer
+1.0
+What is the purpose of the final keyword in Java?
+
+To prevent a class from being inherited
+To prevent a method from being overridden
+To prevent a variable from being reassigned
+# All of the above
+
+6
+Multiple Choice - Single Answer
+1.0
+Which keyword is used to implement inheritance in Java?
+
+inherit
+# extends
+implements
+inheritance
+
+Multiple Choice - Single Answer
+
+Consider the following Java code:
+
+
+
+abstract class Shape {
+    protected double area;
+    public abstract void calculateArea();
+
+    public void displayArea() {
+        System.out.println("Area: " + area);
+    }
+}
+
+class Circle extends Shape {
+    private double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    @Override
+    public void calculateArea() {
+        this.area = Math.PI * Math.pow(radius, 2); 
+    }
+}
+
+public class TestShapes {
+    public static void main(String[] args) {
+        Circle circle = new Circle(5.0);
+        circle.calculateArea();
+        circle.displayArea();
+    }
+}
+
+
+What is the role of the abstract method calculateArea() in the Shape class?
+
+A. To provide a default implementation for calculating the area.
+
+B. To enforce that all subclasses must implement a method to calculate the area.
+
+C. To make the Shape class a final class.
+
+D. To prevent the instantiation of the Shape class.
+
+ 
+Only A
+# B
+C
+D
+
+Multiple Choice - Single Answer
+
+Assuming that all the necessary imports are done, what will be the output of the following Java code?
+
+
+
+ class ct {
+     public int x;
+     private int y;
+ }    
+ class uv extends ct {
+     void display() {
+         super.y = super.x + 1;
+         System.out.println(super.x + " " + super.y); 
+     }
+ } 
+ class inheritance {
+     public static void main(String args[]) {
+         uv obj = new uv();
+         obj.x = 1;
+         obj.y = 2;   
+         obj.display();     
+     }
+ }
+ 
+2 2
+3 3
+Runtime Error
+# Compilation Error
+
+Multiple Choice - Single Answer
+
+Which of the following statement(s) with regard to an abstract class in JAVA is/are TRUE ?
+
+
+
+I. An abstract class is one that is not used to create objects.
+
+II. An abstract class is designed only to act as a base class to be inherited by other classes.
+
+ 
+Only I
+Only II
+Neither I nor II
+# Both I and II
+
+Multiple Choice - Single Answer
+
+Assuming that all the necessary imports are done, what will be the correct output of the given code?
+
+class MainSubClass {
+    void f(int i) {
+        System.out.print(i);
+    }
+}
+
+public class Main extends MainSubClass {
+     void f(int i) {
+        System.out.print(2*i);
+    }
+	public static void main(String[] args) {
+	    MainSubClass x = new Main();
+        Main y = new Main();
+        Main z = new Main();
+        x.f(27); 
+        ((MainSubClass)y).f(57); 
+        z.f(194); 
+    }
+}
+
+
+5457194
+2757194
+# 54114388
+27114194

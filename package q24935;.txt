@@ -1,0 +1,33 @@
+//File Name: q24935/Main.java
+//==================================
+package q24935;
+import java.util.Scanner;
+
+// write your code here...
+class Product{
+	String productName;
+	double price;
+}
+class ProductInfo extends Product{
+	void inputProductDetails(){
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("product name: ");
+		super.productName=scanner.next();
+		System.out.print("price: $");
+		super.price=scanner.nextDouble();
+	}
+	void displayProductInfo(){
+		System.out.println("product name: "+super.productName);
+		System.out.println("price: $"+super.price);
+	}
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+        ProductInfo productData = new ProductInfo();
+        productData.inputProductDetails();
+        productData.displayProductInfo();
+    }
+}
+

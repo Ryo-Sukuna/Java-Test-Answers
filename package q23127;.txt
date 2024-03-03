@@ -1,0 +1,42 @@
+//File Name: q23127/BankingSystem.java
+//==================================
+package q23127;
+import java.util.Scanner;
+
+	// write your code here...
+	class Account{
+		String accountNumber;
+		double balance;
+		void inputDetails(){
+			Scanner scanner=new Scanner(System.in);
+			System.out.print("Enter account number: ");
+			accountNumber=scanner.next();
+		}
+		void displayBalance(){
+			System.out.println("Current balance: "+balance);
+		}
+	}
+	class Transaction extends Account{
+		double amount;
+		void inputAmount(){
+			Scanner scanner=new Scanner(System.in);
+			System.out.print("Enter transaction amount: ");
+			amount=scanner.nextDouble();
+			System.out.println("Transaction Successful!");
+		}
+		void performTransaction(){
+			balance+=amount;
+			System.out.println("Current balance: "+balance);
+		}
+	}
+
+public class BankingSystem {
+    public static void main(String[] args) {
+        Transaction transaction = new Transaction();
+        transaction.inputDetails();
+        transaction.displayBalance();
+        transaction.inputAmount();
+        transaction.performTransaction();
+    }
+}
+

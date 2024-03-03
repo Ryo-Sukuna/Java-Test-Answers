@@ -1,0 +1,57 @@
+//File Name: q23014/ProductInventorySystem.java
+//==================================
+package q23014;
+
+import java.util.Scanner;
+
+	// write your code here..
+	class Product{
+		String productName;
+		double price;
+		int quantity;
+		void displayInfo(){
+			System.out.println("Product Name: "+productName);
+			System.out.println("Price: $"+price);
+			System.out.println("Quantity: "+quantity);
+		}
+	}
+	class ElectronicProduct extends Product{
+		int warrantyPeriod;
+		void displayInfo(){
+			super.displayInfo();
+			System.out.println("Warranty Period: "+warrantyPeriod+" months");
+		}
+		ElectronicProduct(String productName,double price,int quantity,int warrantyPeriod){
+			super.productName=productName;
+			super.price=price;
+			super.quantity=quantity;
+			this.warrantyPeriod=warrantyPeriod;
+		}
+	}
+	
+
+public class ProductInventorySystem {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter details for a product:");
+        System.out.print("Product Name: ");
+        String productName = scanner.next();
+        System.out.print("Price: $");
+        double price = scanner.nextDouble();
+        System.out.print("Quantity: ");
+        int quantity = scanner.nextInt();
+
+        System.out.println("Enter details for an electronic product:");
+        System.out.print("Warranty Period (months): ");
+        int warrantyPeriod = scanner.nextInt();
+
+        ElectronicProduct electronicProduct = new ElectronicProduct(productName, price, quantity, warrantyPeriod);
+
+        System.out.println("Product Details:");
+        electronicProduct.displayInfo();
+
+        scanner.close();
+    }
+}
+

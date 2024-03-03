@@ -1,0 +1,25 @@
+//File Name: q23125/MainFunction.java
+//==================================
+package q23125;
+import java.util.Scanner;
+import java.math.*;
+	//write your code here..
+
+public class MainFunction {
+    public static void main(String[] args) {
+// 		Area area = new Area();
+//         area.Parametersin();
+//         area.displayArea();
+//     }
+// }
+Scanner sc=new Scanner(System.in);
+
+System.out.print("Enter length: ");
+float x=sc.nextFloat();
+System.out.print("Enter breadth: ");
+float y=sc.nextFloat();
+float i=x*y;
+System.out.printf("%.2f\n",i);
+}
+}
+

@@ -1,0 +1,51 @@
+//File Name: q18048/Main.java
+//==================================
+package q18048;
+import java.util.Scanner;
+
+// Abstract class CoffeeMachine
+abstract class CoffeeMachine {
+abstract void brewCoffee(int cups);
+abstract void addWater(int cups);
+}
+
+// Concrete subclass BasicCoffeeMachine
+class BasicCoffeeMachine extends CoffeeMachine {
+    void addWater(int cups){
+    	System.out.println("Adding "+cups+" cups of water to the coffee machine");
+    }
+    void brewCoffee(int cups){
+    	System.out.println("Brewing "+cups+" cups of basic coffee");
+    }
+    //write your code here
+    
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+        // Create an instance of BasicCoffeeMachine
+        BasicCoffeeMachine coffeeMachine = new BasicCoffeeMachine();
+
+        // Create a Scanner object to get user input
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user for the number of cups of coffee
+        System.out.print("cups of coffee: ");
+        int coffeeCups = scanner.nextInt();
+
+        // Prompt the user for the number of cups of water
+        System.out.print("cups of water: ");
+        int waterCups = scanner.nextInt();
+
+        // Add water to the coffee machine
+        coffeeMachine.addWater(waterCups);
+
+        // Brew a cup of coffee
+        coffeeMachine.brewCoffee(coffeeCups);
+
+        // Close the scanner
+        scanner.close();
+    }
+}
+

@@ -1,0 +1,33 @@
+//File Name: q24933/Main.java
+//==================================
+package q24933;
+import java.util.Scanner;
+
+// write your code here...
+class Car{
+	String x;
+	String y;
+	public void inputCarDetails(){
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter car make: ");
+		x=sc.nextLine();
+		System.out.print("Enter car model: ");
+		y=sc.nextLine();
+	}
+}
+
+class CarInfo extends Car{
+	public void displayCarInfo(){
+		System.out.println("Car Make: "+x);
+		System.out.println("Car Model: "+y);
+	}
+}
+
+public class Main {
+    public static void main(String[] args) {
+        CarInfo carData = new CarInfo();
+        carData.inputCarDetails();
+        carData.displayCarInfo();
+    }
+}
+

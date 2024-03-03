@@ -1,0 +1,38 @@
+//File Name: q23765/NumberTransform.java
+//==================================
+package q23765;
+import java.util.Scanner;
+interface NumberTransformer {
+
+void transform(int num);
+}
+class SquareTransformer implements NumberTransformer{
+	public void transform(int num){
+		System.out.println("Square: "+num*num);
+	}
+}
+ class CubeTransformer implements NumberTransformer{
+	public void transform(int num){
+		System.out.println("Cube: "+num*num*num);
+	}
+}
+	// write your code here..
+	
+
+public class NumberTransform {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int inputNumber = scanner.nextInt();
+
+        NumberTransformer squareTransformer = new SquareTransformer();
+        squareTransformer.transform(inputNumber);
+
+        NumberTransformer cubeTransformer = new CubeTransformer();
+        cubeTransformer.transform(inputNumber);
+
+        scanner.close();
+    }
+}
+

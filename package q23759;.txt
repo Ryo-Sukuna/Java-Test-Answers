@@ -1,0 +1,50 @@
+//File Name: q23759/MovieRating.java
+//==================================
+package q23759;
+import java.util.Scanner;
+
+	// write your code here...
+	class Movie{
+		void rateMovie(){
+			System.out.println("Rating a movie");
+		}
+	}
+	class ActionMovie extends Movie{
+		void rateMovie(){
+			Scanner sc = new Scanner(System.in);
+			System.out.println("Title of the action movie: ");
+			String title=sc.nextLine();
+			System.out.println("Rating for the action movie: ");
+			double rating=sc.nextDouble();
+			System.out.println("Rated Action Movie Details:");
+			System.out.println("Title: "+title);
+			System.out.println("Rating: "+rating);
+		}
+	}
+	class ComedyMovie extends Movie{
+		void rateMovie(){
+			Scanner sc= new Scanner(System.in);
+			System.out.println("Title of the comedy movie: ");
+			String title=sc.nextLine();
+			System.out.println("Rating for the comedy movie: ");
+			double rating = sc.nextDouble();
+			System.out.println("Rated Comedy Movie Details:");
+			System.out.println("Title: "+title);
+			System.out.println("Rating: "+rating);
+		}
+	}
+
+
+public class MovieRating {
+    public static void main(String[] args) {
+        Movie movie = new Movie();
+        movie.rateMovie();
+
+        ActionMovie actionMovie = new ActionMovie();
+        actionMovie.rateMovie();
+
+        ComedyMovie comedyMovie = new ComedyMovie();
+        comedyMovie.rateMovie();
+    }
+}
+

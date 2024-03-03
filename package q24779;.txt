@@ -1,0 +1,49 @@
+//File Name: q24779/ScientificSimulation.java
+//==================================
+package q24779;
+import java.util.Scanner;
+
+	// write your code here...
+	class PhysicalPhenomenon{
+		void calculate(){
+			System.out.println("Calculating distance and displacement");
+		}
+	}
+	class Scalar extends PhysicalPhenomenon{
+		void calculate(){
+			Scanner sc = new Scanner(System.in);
+			System.out.print("Enter speed: ");
+			double speed=sc.nextDouble();
+			System.out.print("Enter time: ");
+			double time=sc.nextDouble();
+			double distance=speed*time;
+			System.out.printf("Distance: %.2f\n",distance);
+		}
+	}
+	class Vector extends PhysicalPhenomenon{
+		void calculate(){
+			Scanner sc = new Scanner(System.in);
+			System.out.print("Enter velocity: ");
+			double velocity = sc.nextDouble();
+			System.out.print("Enter time: ");
+			double time=sc.nextDouble();
+			double displacement=velocity*time;
+			System.out.format("Displacement: %.2f\n",displacement);
+		}
+	}
+	
+
+public class ScientificSimulation {
+    public static void main(String[] args) {
+        // Example usage of classes
+        PhysicalPhenomenon phenomenon = new PhysicalPhenomenon();
+        phenomenon.calculate();
+
+        Scalar scalar = new Scalar();
+        scalar.calculate();
+
+        Vector vector = new Vector();
+        vector.calculate();
+    }
+}
+

@@ -1,0 +1,39 @@
+//File Name: q23492/TravelBookingTest.java
+//==================================
+package q23492;
+import java.util.Scanner;
+// write your code here...
+class TravelBooking {	
+	void book() {
+		System.out.println("Booking a travel service");
+		}}
+		class FlightBooking extends TravelBooking {
+			@Override	
+			void book() {	
+				Scanner sc = new Scanner(System.in);	
+				System.out.print("Destination for flight booking: ");
+				String dest = sc.nextLine();		
+				System.out.println("Flight booked");	
+				
+			}}
+			class HotelBooking extends TravelBooking {
+				@Override	
+				void book() {		
+					Scanner sc = new Scanner(System.in);	
+					System.out.print("Hotel name for booking: ");
+					String hotel = sc.nextLine();	
+					System.out.println("Hotel booked");	}}
+
+public class TravelBookingTest {
+    public static void main(String[] args) {
+        TravelBooking genericBooking = new TravelBooking();
+        genericBooking.book();
+
+        FlightBooking flightBooking = new FlightBooking();
+        flightBooking.book();
+
+        HotelBooking hotelBooking = new HotelBooking();
+        hotelBooking.book();
+    }
+}
+

@@ -1,0 +1,43 @@
+//File Name: q24942/Main.java
+//==================================
+package q24942;
+import java.util.Scanner;
+
+// write your code here...
+class Employee{
+	String employeeName;
+	String designation;
+	int yearsOfExperience;
+}
+class EmployeeInfo extends Employee{
+	double salaryPerYear;
+	void inputEmployeeDetails(){
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Enter employee name: ");
+		super.employeeName=scanner.nextLine();
+		System.out.print("Enter employee designation: ");
+		super.designation=scanner.nextLine();
+		System.out.print("Enter years of experience: ");
+		super.yearsOfExperience=scanner.nextInt();
+		System.out.print("Enter salary per year: $");
+		salaryPerYear=scanner.nextDouble();
+	}
+	void displayEmployeeInfo(){
+		System.out.println("Employee Name: "+super.employeeName);
+		System.out.println("Designation: "+super.designation);
+		System.out.println("Years of Experience: "+super.yearsOfExperience+" years");
+	}
+	void calculateSalary(){
+		System.out.println("Salary: $"+(salaryPerYear*super.yearsOfExperience));
+	}
+}
+
+public class Main {
+    public static void main(String[] args) {
+        EmployeeInfo employeeData = new EmployeeInfo();
+        employeeData.inputEmployeeDetails();
+        employeeData.displayEmployeeInfo();
+        employeeData.calculateSalary();
+    }
+}
+

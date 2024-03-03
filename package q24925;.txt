@@ -1,0 +1,28 @@
+//File Name: q24925/Main.java
+//==================================
+package q24925;
+import java.util.Scanner;
+
+// write your code here...
+class Squareln{
+	int side;
+	void inputDimensions(){
+		Scanner scanner = new Scanner(System.in);
+		side=scanner.nextInt();
+	}
+}
+class AreaOut extends Squareln{
+	void calculateArea(){
+		System.out.println("Area: "+(super.side*super.side));
+	}
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+        AreaOut areaOut = new AreaOut();
+        areaOut.inputDimensions();
+        areaOut.calculateArea();
+    }
+}
+

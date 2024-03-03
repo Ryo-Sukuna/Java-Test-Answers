@@ -1,0 +1,39 @@
+//File Name: q24775/BinaryCalc.java
+//==================================
+package	q24775;
+import java.util.Scanner;
+interface BinaryOperation {
+
+	// write your code here..
+	
+		// write your code here..
+		void operate(String b1, String b2);	}
+		class BinaryAddition implements BinaryOperation{
+			public void operate(String b1, String b2) {	
+				System.out.println("Binary Addition Result: "+ (Integer.toBinaryString(Integer.parseInt(b1, 2) + Integer.parseInt(b2, 2))));				}	}
+				class BinaryMultiplication implements BinaryOperation {
+					public void operate(String b1, String b2) {
+						System.out.println("Binary Multiplication Result: "+ Integer.toBinaryString(Integer.parseInt(b1, 2) * Integer.parseInt(b2, 2)));		}
+						}
+
+public class BinaryCalc {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the binary numbers for addition and multiplication: ");
+        String binaryNumbers = scanner.nextLine();
+
+        String[] binaryArray = binaryNumbers.split(" ");
+
+     
+            BinaryOperation binaryAddition = new BinaryAddition();
+            binaryAddition.operate(binaryArray[0], binaryArray[1]);
+
+            BinaryOperation binaryMultiplication = new BinaryMultiplication();
+            binaryMultiplication.operate(binaryArray[0], binaryArray[1]);
+    
+
+        scanner.close();
+    }
+}
+

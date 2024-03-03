@@ -1,0 +1,46 @@
+//File Name: q24588/ReverseStringApp.java
+//==================================
+package q24588;
+import java.util.Scanner;
+
+interface ReverseString {
+   
+   // write your code here..
+
+   	// write your code here..  
+   	void reverseDisplay(String inp);
+   	}   
+   	class FirstHalf implements ReverseString {  
+   		public void reverseDisplay(String str) {
+   			String firstHalf = str.substring(0, str.length()/2);	
+   			System.out.println("Reversed First Half: "+ (new StringBuilder(firstHalf)).reverse());
+   			}}  	
+   			class SecondHalf implements ReverseString {
+   				
+   				
+   				public void reverseDisplay(String str) {
+   					String secondHalf = str.substring(str.length()/2);  
+   					System.out.println("Reversed Second Half: "+ (new StringBuilder(secondHalf)).reverse());
+   					}
+   				
+   			}
+
+   
+
+public class ReverseStringApp {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String inputString = scanner.nextLine();
+
+        ReverseString firstHalfReverser = new FirstHalf();
+        ReverseString secondHalfReverser = new SecondHalf();
+
+        firstHalfReverser.reverseDisplay(inputString);
+        secondHalfReverser.reverseDisplay(inputString);
+
+        scanner.close();
+    }
+}
+

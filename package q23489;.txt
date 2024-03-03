@@ -1,0 +1,48 @@
+//File Name: q23489/PersonTest.java
+//==================================
+package q23489;
+import java.util.Scanner;
+
+	// write your code here..
+	class Person { 
+		public void introduce() {   
+			System.out.println("Introducing a person");    }}
+			class Student extends Person {
+				@Override    public void introduce() {  
+					Scanner scanner = new Scanner(System.in);   
+					System.out.print("Grade of student: ");   
+					int grade = scanner.nextInt();     
+					System.out.println("I am a student in grade " + grade); 
+					
+					}}
+					class Teacher extends Person { 
+						@Override
+						public void introduce() {  
+							Scanner scanner = new Scanner(System.in); 
+							System.out.print("Subject taught by the teacher: ");  
+							String subject = scanner.nextLine(); 
+							System.out.println("I am a teacher who teaches " + subject);    
+							
+						}}
+						// class Teacher extends Person { 
+						// 	@Override  
+						// 	public void introduce() {  
+						// 		Scanner scanner = new Scanner(System.in); 
+						// 		System.out.print("Subject taught by the teacher: "); 
+						// 		String subject = scanner.nextLine();      
+						// 		System.out.println("I am a teacher who teaches " + subject); 
+						// 		}}
+
+public class PersonTest {
+    public static void main(String[] args) {
+        Person genericPerson = new Person();
+        genericPerson.introduce();
+
+        Student student = new Student();
+        student.introduce();
+
+        Teacher teacher = new Teacher();
+        teacher.introduce();
+    }
+}
+

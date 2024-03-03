@@ -1,0 +1,41 @@
+//File Name: q22117/Main.java
+//==================================
+package q22117;
+import java.util.*;
+class Rectangle {
+	double length;
+	double width;	
+	public double perimeter() {		
+		return 2 * (length + width);
+		}		public double area() {
+			return length * width;	}}
+			class Circle {	
+				double radius;
+				public double perimeter() {	
+					return 2 * Math.PI * radius;
+					}		public double area() {
+						return Math.PI * radius * radius;	}
+				
+			}
+
+
+
+
+
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Rectangle rectangle = new Rectangle();
+        rectangle.length = scanner.nextDouble();
+        rectangle.width = scanner.nextDouble();
+        Circle circle = new Circle();
+        circle.radius = scanner.nextDouble();
+        System.out.println(rectangle.area());
+        System.out.println(rectangle.perimeter());
+        System.out.println(circle.area());
+        System.out.println(circle.perimeter());
+        scanner.close();
+    }
+}
+

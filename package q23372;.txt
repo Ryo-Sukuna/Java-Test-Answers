@@ -1,0 +1,17 @@
+//File Name: q23372/MainGrade.java
+//==================================
+package q23372;
+import java.util.Scanner;
+
+	//write your code here..
+	class Student {    protected String name;    protected int[] subjects = new int[3];    void inputStudentInfo() {        Scanner scanner = new Scanner(System.in);        System.out.print("Enter name: ");        this.name = scanner.nextLine();        System.out.println("Enter marks for three subjects:");        for (int i = 0; i < 3; i++) {            System.out.print("Subject " + (i + 1) + ": ");            this.subjects[i] = scanner.nextInt();        }    }}class GradeCalculator extends Student {    private double averageGrade;    void calculateAverageGrade() {        double sum = 0;        for (int mark : subjects) {            sum += mark;        }        averageGrade = sum / subjects.length;        System.out.printf("Average Grade for %s: %.2f\n", name, averageGrade);    }}
+
+public class MainGrade {
+    public static void main(String[] args) {
+    	
+        GradeCalculator gradeCalculator = new GradeCalculator();
+        gradeCalculator.inputStudentInfo();
+        gradeCalculator.calculateAverageGrade();
+    }
+}
+

@@ -1,0 +1,37 @@
+package q23124;
+import java.util.Scanner;
+
+class Numberin {
+    int num1;
+
+    public void inputNumOne() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter number 1: ");
+        num1 = scanner.nextInt();
+    }
+}
+
+class Product extends Numberin {
+    int num2;
+
+    public void inputNumTwo() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter number 2: ");
+        num2 = scanner.nextInt();
+    }
+
+    public void displayProduct() {
+        System.out.println("Product: " + (num1 * num2));
+    }
+}
+
+public class MainFunction {
+    public static void main(String[] args) {
+        Product product = new Product();
+        product.inputNumOne();
+        product.inputNumTwo();
+        product.displayProduct();
+    }
+}
+
+

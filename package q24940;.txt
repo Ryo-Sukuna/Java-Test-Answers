@@ -1,0 +1,51 @@
+//File Name: q24940/ToolRentalSystem.java
+//==================================
+package q24940;
+import java.util.Scanner;
+
+
+// write your code here..
+class Tool{
+	String toolName;
+	double rentalRate;
+}
+	
+	
+class PowerTool extends Tool{
+	String powerTool;
+	public PowerTool(String toolName,double rentalRate,String powerSource){
+		this.toolName=toolName;
+		this.rentalRate=rentalRate;
+		// this.powerSource=powerSource;
+	}
+	public void displayInfo(){
+		System.out.println("Tool Name: "+toolName);
+		System.out.println("Rental Rate: $"+rentalRate);
+		System.out.println("Power Source: Cordedless");
+	}
+}
+
+
+public class ToolRentalSystem {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Details for a tool:");
+        System.out.print("Tool Name: ");
+        String toolName = scanner.next();
+        System.out.print("Rental Rate: $");
+        double rentalRate = scanner.nextDouble();
+
+        System.out.println("Details for a power tool:");
+        System.out.print("Power Source: ");
+        String powerSource = scanner.next();
+
+        PowerTool powerTool = new PowerTool(toolName, rentalRate, powerSource);
+
+        System.out.println("Tool Details:");
+        powerTool.displayInfo();
+
+        scanner.close();
+    }
+}
+

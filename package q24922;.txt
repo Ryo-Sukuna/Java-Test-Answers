@@ -1,0 +1,43 @@
+//File Name: q24922/BookInfo.java
+//==================================
+package q24922;
+import java.util.Scanner;
+interface Book {
+String getTitle();
+String getAuthor();
+}
+class Novel implements Book{
+	String title;
+	String author;
+	Novel(String title,String author){
+		this.title=title;
+		this.author=author;
+	}
+	public String getTitle(){
+		return title;
+	}
+	public String getAuthor(){
+		return author;
+	}
+}
+	// write your code here..
+
+public class BookInfo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Title of the novel: ");
+        String novelTitle = scanner.nextLine();
+
+        System.out.print("Author of the novel: ");
+        String novelAuthor = scanner.nextLine();
+
+        Novel myNovel = new Novel(novelTitle, novelAuthor);
+
+        System.out.println("Title: " + myNovel.getTitle());
+        System.out.println("Author: " + myNovel.getAuthor());
+
+        scanner.close();
+    }
+}
+

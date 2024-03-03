@@ -1,0 +1,53 @@
+//File Name: q24654/CounterApp.java
+//==================================
+package q24654;
+
+import java.util.Scanner;
+
+interface Counter {
+
+	// write your code here..
+	int displayCount(String input);
+}
+class VowelCount implements Counter{
+	public int displayCount(String input){
+		int count2=0;
+		for(int i=0;i<input.length();i++){
+			char ch = input.charAt(i);
+			if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')
+			count2++;
+		}
+		return count2;
+	}
+}
+class ConsonantCount implements Counter{
+	public int displayCount(String input){
+		int count=0;
+		for(int i=0;i<input.length();i++){
+			char ch = input.charAt(i);
+			if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')
+			continue;
+			else if(Character.isLetter(ch))
+			count++;
+		}
+		return count;
+	}
+}
+
+public class CounterApp {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String inputString = scanner.nextLine();
+
+        Counter vowelCounter = new VowelCount();
+        Counter consonantCounter = new ConsonantCount();
+
+        System.out.println("Number of Vowels: " + vowelCounter.displayCount(inputString));
+        System.out.println("Number of Consonants: " + consonantCounter.displayCount(inputString));
+
+        scanner.close();
+    }
+}
+

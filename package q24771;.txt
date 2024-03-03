@@ -1,0 +1,34 @@
+//File Name: q24771/SquareCubeRoot.java
+//==================================
+package q24771;
+import java.util.*;
+interface MathTransformer {
+
+	void transform(double number);
+}
+class SquareRootTransformer implements MathTransformer{
+	public void transform(double number){
+		System.out.printf("Square root: %.2f\n",Math.sqrt(number));
+	}
+}
+class CubeRootTransformer implements MathTransformer{
+	public void transform(double number){
+		System.out.printf("Cube root: %.2f\n",Math.cbrt(number));
+	}
+}
+
+public class SquareCubeRoot {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        double inputNumber = scanner.nextDouble();
+
+        MathTransformer squareRootTransformer = new SquareRootTransformer();
+        squareRootTransformer.transform(inputNumber);
+
+        MathTransformer cubeRootTransformer = new CubeRootTransformer();
+        cubeRootTransformer.transform(inputNumber);
+    }
+}
+

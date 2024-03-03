@@ -1,0 +1,39 @@
+//File Name: q23042/MainPerson.java
+//==================================
+package q23042;
+import java.util.Scanner;
+
+	// write your code here..
+	class Person{
+		String name;
+		void inputName(){
+			Scanner scanner = new Scanner(System.in);
+			System.out.print("Enter name: ");
+			name=scanner.nextLine();
+		}
+		void displayName(){
+			System.out.println("Name: "+name);
+		}
+	}
+	class Citizen extends Person{
+		int age;
+		void inputAge(){
+			Scanner scanner = new Scanner(System.in);
+			System.out.print("Enter age: ");
+			age=scanner.nextInt();
+		}
+		void displayAge(){
+			System.out.println("Age: "+age);
+		}
+	}
+
+public class MainPerson {
+    public static void main(String[] args) {
+        Citizen citizen = new Citizen();
+        citizen.inputName();
+        citizen.displayName();
+        citizen.inputAge();
+        citizen.displayAge();
+    }
+}
+

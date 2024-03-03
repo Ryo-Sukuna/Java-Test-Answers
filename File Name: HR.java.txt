@@ -1,0 +1,44 @@
+//File Name: HR.java
+//==================================
+import java.util.Scanner;
+
+abstract class EmployeeDetails {
+	private String name;
+	private int emp_id;
+	EmployeeDetails(String name,int id){
+		this.name=name;
+		emp_id=id;
+	}
+	void commonEmpDetails(){
+		System.out.println("Name = "+name);
+		System.out.println("emp_ID = "+emp_id);
+	}
+	abstract void confidentialDetails();
+	
+}
+
+class HR  extends EmployeeDetails {
+	private int salary;
+	private String performance;
+	HR(int salary,String per,String name,int id){
+		super(name,id);
+		this.salary=salary;
+		performance=per;
+	}
+	void confidentialDetails(){
+		System.out.println("salary = "+salary);
+		System.out.println("performance = "+performance);
+	}
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		String name = sc.next();
+		int id = sc.nextInt();
+		int salary=sc.nextInt();
+		String per=sc.next();
+		HR obj = new HR(salary,per,name,id);
+		obj.commonEmpDetails();
+		obj.confidentialDetails();
+	}
+	
+}
+

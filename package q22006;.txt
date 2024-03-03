@@ -1,0 +1,32 @@
+//File Name: q22006/BankAccount.java
+//==================================
+package q22006;
+// write your code here 
+import java.util.*;
+class BankAccount{
+	private double balance;
+	double getBalance(){
+		return balance;
+	}
+	void setBalance(double val){
+		this.balance=val;
+	}
+	BankAccount(){
+		balance=0;
+	}
+	BankAccount(double temp){
+		balance+=temp;
+	}
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        BankAccount account1 = new BankAccount();
+        System.out.println("Default Account - Initial Balance: $" + account1.getBalance());
+        double initialBalanceInput = scanner.nextDouble();
+        BankAccount account2 = new BankAccount(initialBalanceInput);
+        System.out.println("Second Account - Initial Balance: $" + account2.getBalance());
+        scanner.close();
+    }
+}
+// }
+
